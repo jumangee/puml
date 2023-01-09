@@ -1,0 +1,59 @@
+
+@startuml
+    skinparam sequenceGroupBorderThickness 1.5
+    skinparam sequenceGroupBorderColor gray
+    skinparam sequenceGroupBackgroundColor transparent
+    skinparam sequenceReferenceBorderThickness 1.5
+    skinparam MaxMessageSize 150
+ 
+    skinparam sequence  {
+        ReferenceBorderColor gray
+ 
+        LifeLineBorderColor black
+        LifeLineBackgroundColor lightgoldenrodyellow
+ 
+        ParticipantBorderColor black
+        ArrowColor Black
+        ActorBorderColor Gray
+ 
+        ParticipantBorderColor #e30611
+        ParticipantBackgroundColor #e30611
+        ParticipantFontColor white
+        ParticipantFontStyle bold
+ 
+        BoxBorderColor #f8f8f8
+ 
+        DomainBackgroundColor  #e30611
+    }
+ 
+    skinparam note {
+        BorderColor #e30611
+        BackgroundColor #e30611
+        FontColor white
+        FontStyle bold
+    }
+ 
+    skinparam sequenceDivider {
+        BorderColor red
+        BorderThickness 0.0
+        BackgroundColor #e30611
+        FontColor white
+    }
+ 
+   
+    /''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    MTSB STYLE AND HELPER FUNCs
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''/
+ 
+    !unquoted procedure SALT($x)
+    {{
+    salt
+    $x
+    }}
+    !endprocedure
+ 
+    !procedure FA($name)
+    !include <tupadr3/font-awesome/$name>
+    !endprocedure
+ 
+@enduml
